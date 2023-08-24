@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+#boton{
+    background-color: rgb(88, 3, 3);
+    color: white;
+    width: 100%;
+}
+#logueo{
+    margin-left: 95%;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    background-color: azure;
+    color: black;
+    border-style: double;
+    border-radius: 5px;
+}
+
+#logo {
+    width: 200px;
+    height: 200px;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+    margin-left: 0;
+}
+body{
+    background-color: rgb(243, 240, 236);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+}
+a {
+	color: black;
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+.cabecera {
+	background-image: 
+		url("../encabezado1.jpeg");
+	background-repeat: no-repeat;
+	background-position: center; 
+    width: 100%;
+	padding: 2px;
+
+}
+
+.menu{
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 100px;
+    background-color:  rgb(88, 3, 3);
+    
+    /*position: static;*/
+}
+.menu ul{
+	background-color: rgb(88, 3, 3);
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-bottom: 2px;
+    width: 100%;
+
+}
+.menu ul li{
+	display: inline-block;
+	background-color: rgb(88, 3, 3);
+	padding: 3px;
+    width: 16.33%;
+    margin: 0;
+	position: relative;
+    
+}
+.menu ul a{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 20px;
+	padding: 20px;
+	margin-bottom: 2px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: black;
+    font-size: 15px;
+	display: block;
+}
+.menu, .submenu {
+    font-size: 0;
+	/* truco por el uso de inline-block*/
+	list-style: none;
+}
+.submenu{
+    position: absolute;
+	display: none;
+}
+.submenu li {
+	display: block;
+	
+}
+/* efecto al pasar el mouse por los items del menú */
+
+.menu ul li:hover {
+	background: grey;
+}
+
+/* menú desplegable */
+
+.menu ul ul{
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: rgb(88, 3, 3);
+	padding: 0;
+	width: 16.33%;
+}
+/* items del menú desplegable */
+.menu ul ul li{
+	float: none;
+	width: 293px;
+}
+/* enlaces de los items del menu desplegable */
+.menu ul ul a{
+	line-height: 120%;
+	padding: 10px 15px;
+	text-align: center;
+}
+
+/*items del menu desplegable al pasar el mouse */
+.menu li:hover > ul {
+	display: block;
+}
+main{
+    width: 100vh;
+    height: 100%;
+}
+#contenedorVideo{
+    float: center;
+    background-color: azure;
+    margin: 0px 50px 20px 50px;
+    padding: 0px 5px 20px 5px;
+    height: 50%;
+    border: 5px solid rgb(88, 3, 3);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+#contenedorVideo h2 {
+	margin: 0px 20px 20px 20px;
+
+}
+#contenedorVideo #video {
+    float: center;
+}
+#contenedorVideo .descripcion{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+h2, h3{
+    text-align: center;
+    background-color: rgb(88, 3, 3) ;
+    margin-bottom: 0px;
+}
+span{
+    font-weight: bold;
+}
+#galeria {
+    float: center;
+    background-color: azure;
+    padding: 0px 20px 50px 20px;
+    height: 700px;
+    border: 5px solid rgb(88, 3, 3);
+    margin: 20px 50px 20px 50px;
+}
+#galeria h2{
+    margin-bottom: 10px;
+}
+#galeria img{
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+}
+#galeria img:hover{
+    transform: scale(2.0);
+    transition: all 0.9s;
+}
+#pregFrec h2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.titPreg{
+    grid-area: titulo;
+}
+.preg1{
+    grid-area: item1;
+}
+.preg2{
+    grid-area: item2;
+}
+#bloques{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "item1 item2";
+    gap: 20%;
+    padding: 100px;
+}
+#pregFrec{
+    float: center;
+    background-color: azure;
+    padding: 50px 20px 50px 20px;
+    height: 300px;
+    border: 5px solid rgb(88, 3, 3);
+    margin: 20px 50px 20px 50px;
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "titulo"
+                         "bloque";
+}
+footer{
+    background-color: rgb(88, 3, 3);
+    height: 100px;
+    float: bottom;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+}
+#copyright{
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+    vertical-align: bottom;
+}
+.redes{
+    color: white;
+    font-size: 30px;
+}
+.subir{
+    background-color: rgb(88, 3, 3);
+    color: white;
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    text-align: center;
+    line-height: 40px;
+    box-shadow: 0 0 5px white;
+}
+
+.encabezado{
+    background-position: center;
+    background-size: cover;
+}
+#titulo {
+    padding-left: 0;
+    padding-right: 80%;
+    text-align: left;
+    margin-left: 0;
+}
+
+#img{
+    padding: 0;
+    margin-right: 0;
+}
+.contenedor {
+    float: center;
+    background-color: azure;
+    padding: 20px 20px 50px 20px;
+    height: 80%;
+    border: 5px solid rgb(88, 3, 3);
+    margin: 0px 50px 20px 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content:space-between;
+}
+.sucursal{
+    border: 5px groove rgb(88, 3, 3);
+    margin: 5px;
+    padding: 10px;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    
+}
+.sucursal .imgSucursal{
+    width: 250px;
+    height: 250px;
+    margin: 10px 75px 10px 75px;
+}
+.sucur{
+    margin: 5px 30px 5px 30px;
+}
+.sucursal .direc{
+    font-style: italic;
+}
+#servicios .serv{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "item1 item2"; 
+}
+#tituloForm{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#formu input{
+    margin: 5px;
+}
+#formu label{
+    margin: 5px;
+}
+#enviarForm{
+    border-style: double;
+    padding: 2px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#observaciones{
+    margin: 5px;
+    border-style: dotted;
+}
+
+#req{
+    color: rgb(88, 3, 3) ;
+}
